@@ -149,9 +149,10 @@
   border: none;
   background: transparent;
   color: white;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 200;
   text-decoration: none;
+  /* letter-spacing: 1px; */
   transition: color 0.2s ease;
 }
 

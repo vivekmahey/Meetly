@@ -1,0 +1,533 @@
+.meetVideoContainer{
+    position: relative;
+    height: 100vh;
+    background: rgb(3, 2, 28);
+
+}
+
+.meetUserVideo{
+    position: absolute;
+    bottom: 10vh;
+    height:20vh;
+    width: auto;
+    left: 0;
+    border: 1px solid rgb(90, 87, 148);
+    border-radius: 20px;
+}
+.buttonContainers{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100vw;
+}
+
+.buttonContainers svg{
+    font-size: 3rem;
+}
+
+.confrenceView{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.confrenceView video{
+    height: 30vw;
+    min-width: 20vh;
+    border-radius: 20px;
+}
+
+.chatRoom{
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    height: 90vh;
+    width: 30vw;
+    color: #21222D;
+    border: 1px solid rgb(209, 206, 238);
+    background-color: #f4f4fd;
+    border-radius: 16px;
+    padding-inline: 20px;
+}
+/* 
+.chatContrainer{
+    position: relative;
+    height: 100%;
+}
+.chattingArea{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.chattingDisplay{
+    
+} */
+
+
+
+
+
+.chatContrainer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.chatContrainer h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #202124;
+    margin: 10px 0 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e1e5ef;
+}
+
+/* Messages area */
+.chattingDisplay {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 4px 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #c7d2e5 transparent;
+}
+
+/* Empty state */
+.chattingDisplay > p {
+    text-align: center;
+    color: #7b8497;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+/* Individual message row */
+.messageRow {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    gap: 4px;
+}
+
+.sentMessage {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.receivedMessage {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+/* Sender name */
+.messageSender {
+    font-size: 11px;
+    font-weight: 600;
+    color: #667085;
+    padding: 0 8px;
+}
+
+/* Message bubble */
+.messageBubble {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    box-shadow: 0 1px 2px rgba(20, 35, 70, 0.08);
+}
+
+/* Your sent messages */
+.sentMessage .messageBubble {
+    background: #ffffff;
+    color: #202124;
+    border: 1px solid #e1e5ef;
+    border-bottom-right-radius: 4px;
+}
+
+/* Messages from other participants */
+.receivedMessage .messageBubble {
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    border-bottom-left-radius: 4px;
+}
+
+
+
+.chattingArea {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 0 4px;
+    border-top: 1px solid #e1e5ef;
+    background: #f4f4fd;
+    box-sizing: border-box;
+}
+
+/* Input takes available width */
+.chattingArea .MuiTextField-root {
+    flex: 1;
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.chattingArea .MuiInputBase-root {
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.chattingArea .MuiOutlinedInput-input {
+    padding: 13px 12px;
+}
+
+.chattingArea .MuiOutlinedInput-notchedOutline {
+    border-color: #d5dced;
+}
+
+.chattingArea .MuiTextField-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #9bb5ed;
+}
+
+.chattingArea .MuiTextField-root .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #2563eb;
+    border-width: 1.5px;
+}
+
+/* Send button */
+.chattingArea .MuiButton-root {
+    flex-shrink: 0;
+    min-width: 76px;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: none;
+}
+
+.chattingArea .MuiButton-root:hover {
+    background: #1d4ed8;
+    box-shadow: 0 3px 8px rgba(37, 99, 235, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lobbyContainer {
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202124;
+}
+
+.lobbyContainer h2 {
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Username and Connect */
+.lobbyForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.lobbyForm .MuiTextField-root {
+  flex: 1;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.lobbyForm .MuiButton-root {
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 24px;
+  background: #1a73e8;
+  color: #ffffff;
+  text-transform: none;
+  box-shadow: none;
+}
+
+.lobbyForm .MuiButton-root:hover {
+  background: #1765cc;
+  box-shadow: none;
+}
+
+/* Camera preview */
+.lobbyVideo {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  background: #202124;
+  border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+  .lobbyContainer {
+    padding: 24px 16px;
+  }
+
+  .lobbyContainer h2 {
+    font-size: 26px;
+  }
+
+  .lobbyForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lobbyForm .MuiTextField-root,
+  .lobbyForm .MuiButton-root {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* =========================
+   TABLET VIEW
+========================= */
+@media (max-width: 900px) {
+    .chatRoom {
+        width: 38vw;
+        right: 10px;
+        padding-inline: 14px;
+        box-sizing: border-box;
+    }
+
+    .confrenceView video {
+        width: 32vw;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    .chattingArea {
+        gap: 6px;
+    }
+
+    .chattingArea .MuiButton-root {
+        min-width: 60px;
+        padding: 0 10px;
+    }
+}
+
+/* =========================
+   MOBILE VIEW
+========================= */
+@media (max-width: 600px) {
+    .meetVideoContainer {
+        min-height: 100dvh;
+        height: 100dvh;
+        overflow: hidden;
+        padding-bottom: 75px;
+        box-sizing: border-box;
+    }
+
+    /* Remote participant videos */
+    .confrenceView {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .confrenceView video {
+        width: calc(50vw - 16px);
+        min-width: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    /* Local camera preview */
+    .meetUserVideo {
+        left: 10px;
+        bottom: 85px;
+        width: 100px;
+        height: 135px;
+        object-fit: cover;
+        border-radius: 12px;
+        z-index: 2;
+    }
+
+    /* Chat panel */
+    .chatRoom {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        left: 8px;
+        width: auto;
+        height: calc(100% - 100px);
+        padding: 12px;
+        border-radius: 14px;
+        box-sizing: border-box;
+        z-index: 3;
+    }
+
+    .chatContrainer {
+        height: 100%;
+        min-height: 0;
+    }
+
+    .chatContrainer h1 {
+        font-size: 20px;
+        margin: 4px 0 10px;
+        padding-bottom: 10px;
+    }
+
+    .chattingDisplay {
+        gap: 10px;
+        padding: 8px 2px 14px;
+        overscroll-behavior: contain;
+    }
+
+    .messageRow {
+        max-width: 88%;
+    }
+
+    .messageBubble {
+        font-size: 14px;
+        padding: 9px 12px;
+    }
+
+    /* Message input */
+    .chattingArea {
+        gap: 8px;
+        padding: 10px 0 2px;
+    }
+
+    .chattingArea .MuiTextField-root {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .chattingArea .MuiOutlinedInput-input {
+        padding: 11px 10px;
+        font-size: 14px;
+    }
+
+    .chattingArea .MuiButton-root {
+        min-width: 62px;
+        min-height: 42px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    /* Call controls */
+    .buttonContainers {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        box-sizing: border-box;
+        background: rgba(3, 2, 28, 0.96);
+        z-index: 5;
+    }
+
+    .buttonContainers svg {
+        font-size: 1.8rem;
+    }
+
+    .buttonContainers .MuiIconButton-root {
+        padding: 8px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE VIEW
+========================= */
+@media (max-width: 380px) {
+    .chatRoom {
+        padding: 9px;
+    }
+
+    .chatContrainer h1 {
+        font-size: 18px;
+    }
+
+    .messageRow {
+        max-width: 92%;
+    }
+
+    .chattingArea {
+        gap: 5px;
+    }
+
+    .chattingArea .MuiButton-root {
+        min-width: 54px;
+        padding: 0 8px;
+    }
+
+    .meetUserVideo {
+        width: 85px;
+        height: 115px;
+    }
+
+    .buttonContainers {
+        gap: 4px;
+    }
+
+    .buttonContainers svg {
+        font-size: 1.5rem;
+    }
+}
